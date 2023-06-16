@@ -1,6 +1,5 @@
 package com.company.LinkedList;
 
-import java.util.Scanner;
 
 public class checkIfCircularLinkedList {
     private static boolean checkCircularLinkedList(Node head){
