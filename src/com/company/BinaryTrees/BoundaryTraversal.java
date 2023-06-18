@@ -1,6 +1,7 @@
 package com.company.BinaryTrees;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class BoundaryTraversal {
@@ -9,7 +10,7 @@ public class BoundaryTraversal {
         return (root.left == null) && (root.right == null);
     }
 
-    private static void addLeftBoundary(Node root, ArrayList<Integer> res) {
+    private static void addLeftBoundary(Node root, List<Integer> res) {
         Node curr = root.left;
         while(curr != null) {
             if (!isLeaf(curr)) {
@@ -25,7 +26,7 @@ public class BoundaryTraversal {
     }
 
 
-    private static void addLeaves(Node root, ArrayList<Integer> res) {
+    private static void addLeaves(Node root, List<Integer> res) {
         if(isLeaf(root)){
             res.add(root.val);
             return;
@@ -39,9 +40,9 @@ public class BoundaryTraversal {
     }
 
 
-    private static void addRightBoundary(Node root, ArrayList<Integer> res) {
+    private static void addRightBoundary(Node root, List<Integer> res) {
         Node curr = root.right;
-        ArrayList<Integer> ls = new ArrayList<>();
+        List<Integer> ls = new ArrayList<>();
         while(curr != null) {
             if (!isLeaf(curr)) {
                 ls.add(curr.val);
@@ -59,8 +60,8 @@ public class BoundaryTraversal {
     }
 
 
-    private static ArrayList<Integer> boundaryTraversal(Node root) {
-        ArrayList<Integer> res = new ArrayList<>();
+    private static List<Integer> boundaryTraversal(Node root) {
+        List<Integer> res = new ArrayList<>();
         if (!isLeaf(root)) res.add(root.val);
         addLeftBoundary(root, res);
         addLeaves(root, res);
@@ -87,7 +88,7 @@ public class BoundaryTraversal {
 
 
 
-        ArrayList<Integer> res = boundaryTraversal(root);
+        List<Integer> res = boundaryTraversal(root);
        for(int i: res){
            System.out.print(i + " ");
        }
