@@ -11,6 +11,12 @@ public class MergeTwoSortedLinkedList {
         ptr.next = n;
     }
     private static Node mergeLinkedLists(Node head1, Node head2){
+        if(head1 == null){
+            return head2;
+        }
+        if(head2 == null){
+            return head1;
+        }
         Node p = head1;
         Node q = head2;
         Node res  = new Node(0);
