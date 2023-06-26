@@ -28,7 +28,7 @@ public class inOrderSuccessorAndPredecessor {
 
         p4.left = p8;
         succAndPred(root, 20);
-        System.out.println("Predecessor: " + pre.val + " Successor: " + succ.val);
+//        System.out.println("Predecessor: " + pre.val + " Successor: " + succ.val);
     }
 
 }
